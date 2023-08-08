@@ -6,6 +6,7 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import QRCode from 'qrcode'
 import { encodeURL } from '../utils/encodeURL';
 import BigNumber from 'bignumber.js';
+import Link from 'next/link';
 
 interface Token {
     address: string;
@@ -110,7 +111,7 @@ const Checkout = ({ link, tokens }) => {
                             <div className="relative">
                                 <div className="relative w-full cursor-pointer overflow-hidden rounded-lg  text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
                                     <Combobox.Input
-                                        className="relative py-5 pl-2 w-full cursor-pointer rounded-lg bg-[#303C4D] text-left shadow-md border-none  text-lg lg:text-md leading-5 text-white outline-0 border-0 focus:ring-0 focus:ring-offset-0 focus:outline-0"
+                                        className="relative py-5  w-full cursor-pointer rounded-lg bg-[#303C4D] text-left shadow-md border-none  text-lg lg:text-md leading-5 text-white focus:ring-0"
                                         displayValue={(token: Token) => token.name}
                                         onChange={(event) => setQuery(event.target.value)}
                                     />
@@ -173,12 +174,11 @@ const Checkout = ({ link, tokens }) => {
                 </div>
 
                 {/* QR Code */}
-                <div className="col-span-1 lg:col-span-1 mt-6 lg:mt-12">
+                <div className="col-span-1 lg:col-span-1 mt-6 lg:mt-12">                   
                     {qrCode ? (
                         <div className="mt-4 flex flex-col items-center">
-                            <div className="lg:hidden">
-                                <h1 className="text-2xl lg:text-3xl text-white font-bold">Scan me 📸</h1>
-                                <p className="text-white my-2">Use your Solana wallet</p>
+                            <div className="">
+                                <h1 className="text-2xl text-white font-bold mb-2">Scan with Phantom mobile</h1>
                             </div>
                             <div className="w-full lg:w-96">
                                 <img
@@ -189,19 +189,18 @@ const Checkout = ({ link, tokens }) => {
                             </div>
                         </div>
                     ) : (
-                        <span className="text-gray-400">...</span>
+                        <span className="flex flex-col items-center mt-4 text-gray-400">...</span>
                     )}
                 </div>
             </div>
-            <a
-                href="https://jup.ag"
-                target="_blank"
-                rel="noopener noreferrer"
+            <Link
+                href="/"                
                 className="pb-6 lg:pb-0 lg:absolute lg:bottom-6 flex flex-row w-full items-center justify-center gap-x-2 hover:opacity-80 ease-in duration-100"
             >
                 <h3 className="font-bold text-white">Powered by</h3>
                 <img className="w-7" src="/jupiter-logo.svg" alt="Jupiter Logo" />
-            </a>
+                <h3 className="font-bold text-white">Pay</h3>
+            </Link>
         </div>
     );
 };

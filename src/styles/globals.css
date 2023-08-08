@@ -5,3 +5,16 @@
 body {
   background-color: #1F2935
 }
+
+/* Hide the scroll bar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem; /* Adjust the width as needed */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb transparent */
+}
