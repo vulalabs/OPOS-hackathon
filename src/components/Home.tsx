@@ -112,7 +112,7 @@ export default function Home() {
                     </button>
                 </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 lg:px-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 lg:px-24 md:mt-16">
                 <div className="grid row-span-1 md:col-span-1 m-6 p-6 mt-12 lg:mt-32">
                     {!user ? (
                         <div>
@@ -238,7 +238,7 @@ export default function Home() {
                             onSubmit={handleSubmit}
                             disabled={!user}
                         >
-                            {formStatus}
+                            {user ? formStatus : 'Sign in'}
                         </button>
                         <a className="pt-6 pb-2 text-xs md:text-lg md:pb-0 md:absolute md:left-0 md:bottom-6 flex flex-row w-full items-center justify-center gap-x-2">
                             <h3 className="font-bold text-white">Powered by</h3>

@@ -111,11 +111,11 @@ const Checkout = ({ link, tokens }) => {
                             <div className="relative">
                                 <div className="relative w-full cursor-pointer overflow-hidden rounded-lg  text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
                                     <Combobox.Input
-                                        className="relative py-5  w-full cursor-pointer rounded-lg bg-[#303C4D] text-left shadow-md border-none  text-lg lg:text-md leading-5 text-white focus:ring-0"
+                                        className="relative py-5 px-5 w-full cursor-pointer rounded-lg bg-[#303C4D] text-left shadow-md border-none  text-lg lg:text-md leading-5 text-white focus:ring-0 utline-0 border-0 focus:outline-none"
                                         displayValue={(token: Token) => token.name}
                                         onChange={(event) => setQuery(event.target.value)}
                                     />
-                                    <Combobox.Button className="absolute bg-[#303C4D] inset-y-0 right-0 flex items-center pl-48 pr-2 hover:opacity-50 duration-100 ease-in">
+                                    <Combobox.Button className="absolute bg-[#303C4D] inset-y-0 right-0 flex items-center pl-24 lg:pl-48 pr-2 hover:opacity-50 duration-100 ease-in">
                                         <ChevronUpDownIcon
                                             className="h-5 w-5 text-gray-400"
                                             aria-hidden="true"
