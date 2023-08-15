@@ -22,9 +22,6 @@ Our solution is aimed at allowing merchants to accept SPL tokens at checkout. He
 - **QR Code Integration:** Our QR codes are compatible with Phantom mobile for efficient transactions.
 - **Token List:** The available token list is pulled from Jupiter Aggregator, providing a wide range of options for transactions.
 
-## License
-Details of the license (if any) can be added here.
-
 ---
 
 Thank you for taking the time to explore our project!
