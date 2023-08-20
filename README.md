@@ -2,6 +2,8 @@
 
 Welcome to our project submitted for the OPOS Hackathon under the Jupiter Track.
 
+Demo Checkout Link: https://juppay.vercel.app/checkout/0414b270-c
+
 ## Overview
 
 Our solution is aimed at allowing merchants to accept SPL tokens at checkout. Here's a step-by-step guide of how it works:
