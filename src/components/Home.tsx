@@ -136,6 +136,9 @@ export default function Home() {
                                 }}
                                 providers={['github']}
                             />
+                            <Link href='https://juppay.vercel.app/checkout/0414b270-c' className="flex flex-col text-center text-white">
+                                Demo Link
+                               </Link> 
                         </div>
                     ) : (
                         <div>
